@@ -1,0 +1,26 @@
+<template name="songMobile2">
+  <div class="owl-carousel">
+    <div class="item">
+      <div class=section>
+        {{#each song}}
+          {{#each lyrics}}
+            <p class="lyric {{barNumber}}">
+              {{barNumber}}. {{{lyric}}}
+            </p>
+          {{/each}}
+        {{/each}}
+      </div>
+    </div>
+    <div class="item">
+      <div class=section>
+        {{#each song}}
+          {{#each lyrics}}
+            <p class="lyric {{barNumber}}">
+              {{barNumber}}. {{translation}}
+            </p>
+          {{/each}}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</template>

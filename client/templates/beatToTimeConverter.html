@@ -1,0 +1,18 @@
+<template name="beatToTimeConverter">
+  <form id="numberOfBars">
+    <input type="text" name="numberOfBars" />
+    <button>Submit</button>
+  </form>
+  <!--{{#each bars}}
+    {{> bar}}
+  {{/each}}-->
+  {{> barTimeInput}}
+  {{time}}
+</template>
+
+<template name="barTimeInput">
+  <form id="beat">
+    <input type="text" name="beat" />
+    <button>Submit</button>
+  </form>
+</template>

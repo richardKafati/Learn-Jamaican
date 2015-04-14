@@ -1,0 +1,36 @@
+<template name="songMobile">
+
+
+  {{#ionView}}
+
+
+    {{#ionSlideBox}}
+      {{#ionContent}}
+        {{#ionSlide}}
+
+            {{#each song}}
+              {{#each lyrics}}
+                <p class="lyric {{barNumber}}">
+                  {{barNumber}}. {{{lyric}}}
+                </p>
+              {{/each}}
+            {{/each}}
+
+        {{/ionSlide}}
+
+        {{#ionSlide}}
+
+            {{#each song}}
+              {{#each lyrics}}
+                <p class="lyric {{barNumber}}">
+                  {{barNumber}}. {{translation}}
+                </p>
+              {{/each}}
+            {{/each}}
+        {{/ionSlide}}
+      {{/ionContent}}
+    {{/ionSlideBox}}
+
+  {{/ionView}}
+
+</template>

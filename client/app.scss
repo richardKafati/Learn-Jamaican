@@ -1,0 +1,44 @@
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+.lyricsController {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+}
+
+.lyrics {
+  overflow: scroll;
+  width: 825px;
+}
+
+/*p {
+  position: relative;
+}*/
+
+.translation {
+  position: absolute;
+  right: 0px;
+}
+
+.overlay {
+  background: white;
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+}
+
+.button {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.owl-carousel .item .section{
+  width: 100%;
+}
+
+p {
+  height: 38px;
+}

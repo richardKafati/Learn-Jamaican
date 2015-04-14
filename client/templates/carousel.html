@@ -1,0 +1,44 @@
+<template name="carousel">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Learn Jamaican</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionSubheaderBar}}
+      <button id="playButton" class="button">
+        <i class="icon {{playing}}"></i>
+      </button>
+      <button id="looper" class="button {{looping}}">
+        <i class="icon ion-loop"></i>
+      </button>
+      <span>Vybz Kartel - Gal a Get More</span>
+    {{/ionSubheaderBar}}
+
+    {{#ionContent}}
+      <div class="carousel">
+        <div>
+          {{#each song}}
+          {{#each lyrics}}
+          <p class="lyric {{barNumber}}">
+            {{barNumber}}. {{{lyric}}}
+          </p>
+          {{/each}}
+          {{/each}}
+        </div>
+        <div>
+          {{#each song}}
+          {{#each lyrics}}
+          <p class="lyric {{barNumber}}">
+            {{barNumber}}. {{translation}}
+          </p>
+          {{/each}}
+          {{/each}}
+        </div>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

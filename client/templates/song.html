@@ -1,0 +1,53 @@
+<template name="song">
+  <div horizontal layout><!--why when this is center-justified isn't the entirety of vertical class layout below a part of horizontal layout's centering?-->
+    <!--<div vertical layout>
+      <a href="{{pathFor 'addSong'}}">addSong</a>
+    </div>
+    <div vertical layout>
+      <a href="{{pathFor 'beatToTimeConverter'}}">Beat To Time Converter</a>
+    </div>-->
+    <img src="/getMore.jpg">
+    {{> lyricsController}}
+  </div>
+</template>
+
+<template name="lyricsController">
+  <div vertical layout class="lyricsController">
+    <h1>Vybz Kartel - Gal a Get More</h1>
+    <audio src="/kartel.ogg" controls loop></audio>
+    <form id="barControls">
+      <div vertical layout>
+        <input type="text" name="startBar" placeholder="loop start bar" />
+        <input type="text" name="endBar" placeholder="loop end bar" />
+        <button>Playback</button>
+      </div>
+    </form>
+    <div flex class="lyrics">
+      {{#each song}}
+        {{#each lyrics}}
+          <p>
+            {{barNumber}}. {{{lyric}}}<span class="translation">{{translation}}</span>
+          </p>
+        {{/each}}
+      {{/each}}
+    </div>
+    <core-overlay id="overlayHafi" backdrop="true" opened="{{hafiOpened}}">
+      <div class="overlay">
+        <p>Definition:</p>
+        <p>Hafi: have to; must</p>
+        <p>eg. yuh hafi pay mi back da money deh.</p>
+        <p>Comments:</p>
+        <p>that's how I thought it should be used!</p>
+      </div>
+    </core-overlay>
+    <core-overlay id="overlayBright" backdrop="true" opened="{{brightOpened}}">
+      <div class="overlay">
+        <p>Definition:</p>
+        <p>bright: rude; fasty</p>
+        <p>eg. him too bright suh mi slap him bloodclaat.</p>
+        <p>Comments:</p>
+        <p>I like this word!</p>
+      </div>
+    </core-overlay>
+  </div>
+</template>

@@ -1,0 +1,16 @@
+<template name="addSong">
+  <audio src="/kartel.ogg" controls></audio>
+  <button id="play">Play</button>
+  <form id="barCount">
+    <input type="text" name="barCount">
+    <button>Submit</button>
+  </form>
+  <form id="songSubmit">
+    {{#each barCountArray}}
+      <div horizontal layout><input flex type="text" name="lyric{{this}}"><input flex type="text" name="translation{{this}}"></div>
+
+    {{/each}}
+
+    <button>Submit</button>
+  </form>
+</template>
